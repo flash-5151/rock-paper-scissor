@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/12-rock-paper-scissor.css" />
+  </head>
+  <body>
+    <div class="choices-container">
+      <h1 class="title">Rock Paper Scissors</h1>
+      <div class="img-container">
+        <button class="js-rock-event">
+          <img src="images/rock-emoji.png" class="image-rock" />
+        </button>
+        <button
+          onclick="
+        userpick='paper';
+        computerMove();
+        gameStart(userpick);
+      
+        display('images/rock-emoji.png','images/paper-emoji.png ','images/scissors-emoji.png' );
+        saveScore();
+
+        "
+        >
+          <img src="images/paper-emoji.png" class="image-paper" />
+        </button>
+        <button
+          onclick="
+            userpick='scissor';
+            computerMove();
+            gameStart(userpick);
+          
+            display('images/rock-emoji.png','images/paper-emoji.png ','images/scissors-emoji.png' );
+            saveScore();
+
+        "
+        >
+          <img src="images/scissors-emoji.png" class="image-scissor" />
+        </button>
+      </div>
+
+      <h2 class="js-output1"></h2>
+
+      <p class="js-output2"></p>
+      <br />
+      <p class="js-output3"></p>
+      <button
+        onclick="
+        resetScore();
+        display('images/rock-emoji.png','images/paper-emoji.png ','images/scissors-emoji.png' );
+        "
+        class="reset-score"
+      >
+        Reset Score
+      </button>
+      <button
+        onclick="
+        autoplay();
+      "
+        class="Auto-play"
+      >
+        Auto Play
+      </button>
+    </div>
+    <script src="scripts/12-rock-paper-scissor.js"></script>
+  </body>
+</html>
